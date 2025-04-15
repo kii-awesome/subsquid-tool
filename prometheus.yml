@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 3s
+
+scrape_configs:
+  - job_name: worker-1
+    static_configs:
+      - targets: ["<IP/HOSTNAME:PORT>"] # IP and PROMETHEUS_PORT in your .env
+  - job_name: worker-2
+    static_configs:
+      - targets: ["<IP/HOSTNAME:PORT>"]
+  - job_name: another-workers
+    static_configs:
+      - targets: ["<IP/HOSTNAME:PORT>"]
